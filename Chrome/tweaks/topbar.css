@@ -1,0 +1,49 @@
+/* Not Required if hiding tab bar */
+/*
+#alltabs-button, #page-action-buttons, #tracking-protection-icon-container, #identity-box {
+	display: none;
+}
+*/
+
+/* Dynamic URL Bar */
+
+#nav-bar {
+	position: fixed !important;
+	top: 0;
+	left: 25%;
+	right: 25%;
+  	z-index: 1;
+	transition: top 0.3s cubic-bezier(0.270, 0.910, 0.435, 1.280), opacity 0.1s ease !important;
+	border-top: none !important;
+	border-radius: 10px !important;
+	border: 1px solid #32302F !important;
+	opacity: 0;
+}
+
+#navigator-toolbox:is(:hover, :focus-within) {
+	#nav-bar {
+	  top: 1rem;
+		opacity: 1;
+  	}
+}
+
+#urlbar-background {
+	border-radius: 10px !important;
+}
+
+/* Hide tab bar */
+#TabsToolbar .toolbar-items {
+	display: none;
+}
+
+/* Show nav buttons */
+#navigator-toolbox {
+	display: flex;
+	flex-flow: row wrap;
+	height: 27px !important;
+}
+
+/* Hide forward button */
+#main-window :-moz-any(#forward-button) {
+	display: none !important;
+}
